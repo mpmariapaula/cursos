@@ -1,0 +1,23 @@
+.cta-line {
+  position: absolute;
+  width: 27rem;
+  height: 44rem;
+  border: 1px solid rgb(255 255 255 / 0.22);
+  border-radius: 50%;
+}
+
+.cta-line-left {
+  left: -12rem;
+  transform: rotate(-28deg);
+}
+
+.cta-line-right {
+  right: -12rem;
+  transform: rotate(28deg);
+}
+
+@media (max-width: 639px) {
+  .cta-line {
+      opacity: 0.65;
+    }
+}

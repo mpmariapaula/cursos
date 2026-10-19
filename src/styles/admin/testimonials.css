@@ -1,0 +1,157 @@
+.admin-tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(41 35 33 / 0.12);
+}
+
+.admin-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid transparent;
+  padding: 0.8rem 1rem;
+  font-size: 0.68rem;
+  color: var(--color-ink-muted);
+}
+
+.admin-tabs button span {
+  display: grid;
+  width: 1.3rem;
+  height: 1.3rem;
+  place-items: center;
+  border-radius: 50%;
+  background: rgb(41 35 33 / 0.08);
+  font-size: 0.52rem;
+}
+
+.admin-tabs button.active {
+  border-color: var(--color-rose);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.testimonial-admin-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.testimonial-admin-card {
+  display: flex;
+  min-height: 22rem;
+  flex-direction: column;
+  border: 1px solid rgb(41 35 33 / 0.09);
+  border-radius: 0.8rem;
+  background: var(--color-warm-white);
+  padding: 1.4rem;
+}
+
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.testimonial-person > span {
+  display: grid;
+  width: 2.3rem;
+  height: 2.3rem;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-sand);
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.testimonial-person strong {
+  display: block;
+  font-size: 0.72rem;
+}
+
+.testimonial-person p {
+  margin-top: 0.18rem;
+  font-size: 0.55rem;
+  color: var(--color-ink-muted);
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.15rem;
+  margin-top: 1.2rem;
+  font-size: 0.7rem;
+  color: rgb(41 35 33 / 0.15);
+}
+
+.testimonial-rating .filled {
+  color: var(--color-rose);
+}
+
+.testimonial-admin-card blockquote {
+  margin-top: 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.testimonial-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1.4rem;
+}
+
+.testimonial-actions .btn {
+  min-height: 2.3rem;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.62rem;
+}
+
+.admin-approve {
+  background: #637d68;
+  color: white;
+}
+
+.admin-reject {
+  color: var(--color-rose);
+}
+
+.moderation-note {
+  margin-top: 1rem;
+  border-left: 2px solid var(--color-rose);
+  background: rgb(167 97 98 / 0.07);
+  padding: 1rem 1.2rem;
+}
+
+.moderation-note strong {
+  font-size: 0.68rem;
+}
+
+.moderation-note p {
+  margin-top: 0.3rem;
+  font-size: 0.62rem;
+  line-height: 1.5;
+  color: var(--color-ink-muted);
+}
+
+@media (max-width: 1023px) {
+  .testimonial-admin-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 639px) {
+  .testimonial-admin-list {
+      grid-template-columns: 1fr;
+    }
+
+  .admin-tabs {
+      overflow-x: auto;
+    }
+
+  .admin-tabs button {
+      flex: none;
+    }
+}

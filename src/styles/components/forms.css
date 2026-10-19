@@ -1,0 +1,86 @@
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field-group {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-group label,
+.field-group legend {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.field-group label span {
+  font-weight: 400;
+  color: var(--color-ink-muted);
+}
+
+.field-group input,
+.field-group select,
+.field-group textarea,
+.admin-toolbar select {
+  width: 100%;
+  border: 1px solid rgb(41 35 33 / 0.14);
+  border-radius: 0.65rem;
+  background: var(--color-cream);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-ink);
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.field-group textarea {
+  resize: vertical;
+}
+
+.field-group input:focus,
+.field-group select:focus,
+.field-group textarea:focus,
+.admin-toolbar select:focus {
+  border-color: var(--color-rose);
+  box-shadow: 0 0 0 3px rgb(167 97 98 / 0.12);
+}
+
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+  color: rgb(111 101 96 / 0.55);
+}
+
+.file-input::file-selector-button {
+  margin-right: 0.8rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-sand);
+  padding: 0.55rem 0.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+@media (max-width: 639px) {
+  .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+  .field-full {
+      grid-column: auto;
+    }
+}

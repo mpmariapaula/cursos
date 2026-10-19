@@ -1,0 +1,18 @@
+.footer-title {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgb(244 240 232 / 0.8);
+}
+
+.footer-link {
+  width: fit-content;
+  font-size: 0.82rem;
+  color: rgb(244 240 232 / 0.55);
+  transition: color 180ms ease;
+}
+
+.footer-link:hover {
+  color: var(--color-cream);
+}

@@ -1,0 +1,6 @@
+export type * from "./admin"
+export type * from "./content"
+export type * from "./course"
+export type * from "./enrollment"
+export type * from "./home-content"
+export type * from "./testimonial"

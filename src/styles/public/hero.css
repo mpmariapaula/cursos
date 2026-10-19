@@ -1,0 +1,135 @@
+.hero-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 4% 20%, rgb(167 97 98 / 0.1), transparent 22rem),
+    var(--color-cream);
+}
+
+.hero-title {
+  max-width: 43rem;
+  font-family: var(--font-serif);
+  font-size: clamp(3.25rem, 5.2vw, 5.4rem);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.hero-title em,
+.section-title em {
+  color: var(--color-rose);
+  font-weight: 400;
+}
+
+.hero-visual {
+  position: relative;
+  padding: 1.25rem 0 2.5rem 1rem;
+}
+
+.hero-image-wrap {
+  position: relative;
+  z-index: 2;
+  height: min(68vw, 42rem);
+  min-height: 30rem;
+  overflow: hidden;
+  border-radius: 14rem 14rem 1rem 1rem;
+}
+
+.hero-image-wrap::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(41 35 33 / 0.36), transparent 42%);
+  content: "";
+}
+
+.hero-orbit {
+  position: absolute;
+  top: -0.8rem;
+  right: -5rem;
+  width: 70%;
+  aspect-ratio: 1;
+  border: 1px solid rgb(167 97 98 / 0.32);
+  border-radius: 50%;
+}
+
+.image-note {
+  position: absolute;
+  z-index: 3;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.note-line {
+  display: block;
+  width: 2.2rem;
+  height: 1px;
+  background: white;
+}
+
+.hero-stamp {
+  position: absolute;
+  z-index: 5;
+  right: -1rem;
+  bottom: 0;
+  display: flex;
+  width: 7rem;
+  height: 7rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-rose);
+  color: white;
+}
+
+.hero-stamp span {
+  position: absolute;
+  inset: 0.55rem;
+  border: 1px solid rgb(255 255 255 / 0.5);
+  border-radius: 50%;
+  padding-top: 0.5rem;
+  text-align: center;
+  font-size: 0.49rem;
+  letter-spacing: 0.12em;
+}
+
+.hero-stamp strong {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1023px) {
+  .hero-visual {
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+}
+
+@media (max-width: 639px) {
+  .hero-title {
+      font-size: clamp(3rem, 15vw, 4.25rem);
+    }
+
+  .hero-image-wrap {
+      height: 34rem;
+      min-height: 0;
+      border-radius: 10rem 10rem 0.75rem 0.75rem;
+    }
+
+  .hero-stamp {
+      right: -0.25rem;
+      width: 6rem;
+      height: 6rem;
+    }
+
+  .image-note {
+      bottom: 1.5rem;
+      left: 1.3rem;
+    }
+}

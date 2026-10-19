@@ -1,0 +1,41 @@
+.eyebrow {
+  margin-bottom: 1.2rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-caramel);
+}
+
+.eyebrow::before {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1px;
+  margin-right: 0.75rem;
+  background: currentColor;
+  vertical-align: middle;
+  content: "";
+}
+
+.eyebrow-light {
+  color: rgb(244 240 232 / 0.55);
+}
+
+.section-intro {
+  max-width: 41rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 4.3vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.section-copy {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-ink-muted);
+}

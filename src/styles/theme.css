@@ -1,0 +1,14 @@
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Newsreader", serif;
+  --color-cream: #f4f0e8;
+  --color-warm-white: #faf8f3;
+  --color-sand: #e8ddce;
+  --color-sand-dark: #baa38a;
+  --color-caramel: #9b7457;
+  --color-rose: #a76162;
+  --color-ink: #292321;
+  --color-ink-soft: #332c29;
+  --color-ink-muted: #6f6560;
+  --shadow-soft: 0 20px 60px rgb(41 35 33 / 0.12);
+}

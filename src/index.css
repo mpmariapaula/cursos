@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap");
+@import "tailwindcss";
+
+/* Tokens do design system (cores, fontes, sombras) */
+@import "./styles/theme.css";
+
+/* Reset e estilos globais */
+@import "./styles/base.css";
+
+/* Componentes compartilhados */
+@import "./styles/components/logo.css";
+@import "./styles/components/buttons.css";
+@import "./styles/components/section-intro.css";
+@import "./styles/components/forms.css";
+@import "./styles/components/status-pill.css";
+@import "./styles/components/modal.css";
+
+/* Site público */
+@import "./styles/public/header.css";
+@import "./styles/public/hero.css";
+@import "./styles/public/marquee.css";
+@import "./styles/public/practice.css";
+@import "./styles/public/courses.css";
+@import "./styles/public/about.css";
+@import "./styles/public/testimonial-form.css";
+@import "./styles/public/feed.css";
+@import "./styles/public/cta.css";
+@import "./styles/public/footer.css";
+@import "./styles/public/enrollment-modal.css";
+
+/* Área administrativa */
+@import "./styles/admin/layout.css";
+@import "./styles/admin/sidebar.css";
+@import "./styles/admin/topbar.css";
+@import "./styles/admin/page-header.css";
+@import "./styles/admin/cards.css";
+@import "./styles/admin/dashboard.css";
+@import "./styles/admin/tables.css";
+@import "./styles/admin/content.css";
+@import "./styles/admin/testimonials.css";
+@import "./styles/admin/editors.css";

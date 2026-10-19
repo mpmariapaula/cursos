@@ -1,0 +1,21 @@
+.practice-image {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 9rem 9rem 0.75rem 0.75rem;
+}
+
+.practice-number {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  width: 2.6rem;
+  height: 2.6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgb(244 240 232 / 0.9);
+  font-size: 0.68rem;
+  font-weight: 600;
+}

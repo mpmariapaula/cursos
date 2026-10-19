@@ -1,0 +1,30 @@
+.status-pill {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.55rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-success {
+  background: #e4ece4;
+  color: #4f6d54;
+}
+
+.status-warning {
+  background: #f2e5d5;
+  color: #8a633c;
+}
+
+.status-danger {
+  background: #f1dfe0;
+  color: #8a4c4e;
+}
+
+.status-neutral {
+  background: #e9e5df;
+  color: #6c6560;
+}

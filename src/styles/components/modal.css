@@ -1,0 +1,59 @@
+.admin-modal-backdrop {
+  position: fixed;
+  z-index: 80;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  background: rgb(41 35 33 / 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.admin-modal {
+  width: min(100%, 43rem);
+  height: 100%;
+  overflow-y: auto;
+  background: var(--color-warm-white);
+  padding: 2rem;
+  box-shadow: -1rem 0 4rem rgb(41 35 33 / 0.2);
+}
+
+.admin-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgb(41 35 33 / 0.1);
+  padding-bottom: 1.5rem;
+}
+
+.admin-modal-header p {
+  margin-bottom: 0.5rem;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-caramel);
+}
+
+.admin-modal-header h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.admin-modal-header button {
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  place-items: center;
+  border: 1px solid rgb(41 35 33 / 0.12);
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 639px) {
+  .admin-modal {
+      padding: 1.25rem;
+    }
+}

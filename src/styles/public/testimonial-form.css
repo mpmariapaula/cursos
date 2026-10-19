@@ -1,0 +1,67 @@
+.rating-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.rating-options input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.rating-options span {
+  display: block;
+  cursor: pointer;
+  border: 1px solid rgb(41 35 33 / 0.14);
+  border-radius: 999px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.72rem;
+  color: var(--color-ink-muted);
+  transition: all 180ms ease;
+}
+
+.rating-options input:checked + span {
+  border-color: var(--color-rose);
+  background: var(--color-rose);
+  color: white;
+}
+
+.testimonial-flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow-step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 1.1rem;
+  font-size: 0.76rem;
+  font-weight: 500;
+}
+
+.flow-step:not(:last-child)::after {
+  position: absolute;
+  top: 1.8rem;
+  bottom: 0.1rem;
+  left: 0.85rem;
+  width: 1px;
+  background: rgb(41 35 33 / 0.15);
+  content: "";
+}
+
+.flow-step span {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-rose);
+  font-size: 0.55rem;
+  color: white;
+}

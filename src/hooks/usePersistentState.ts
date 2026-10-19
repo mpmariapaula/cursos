@@ -1,0 +1,19 @@
+import { useEffect, useState } from "react"
+
+/** Igual ao `useState`, mas mantém o valor salvo no `localStorage`. */
+export function usePersistentState<T>(key: string, initialValue: T) {
+  const [value, setValue] = useState<T>(() => {
+    try {
+      const saved = window.localStorage.getItem(key)
+      return saved ? JSON.parse(saved) as T : initialValue
+    } catch {
+      return initialValue
+    }
+  })
+
+  useEffect(() => {
+    window.localStorage.setItem(key, JSON.stringify(value))
+  }, [key, value])
+
+  return [value, setValue] as const
+}

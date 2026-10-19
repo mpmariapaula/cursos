@@ -1,0 +1,48 @@
+.settings-card {
+  max-width: 56rem;
+}
+
+.settings-card > .form-grid {
+  padding: 0 1.4rem 1.5rem;
+}
+
+.home-editor {
+  max-width: 62rem;
+}
+
+.home-editor > .form-grid {
+  padding: 1.4rem;
+}
+
+.admin-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border: 1px solid rgb(41 35 33 / 0.1);
+  border-radius: 0.7rem;
+  background: var(--color-cream);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.admin-checkbox input {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.1rem;
+  accent-color: var(--color-rose);
+}
+
+.admin-checkbox span {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-checkbox strong {
+  font-size: 0.72rem;
+}
+
+.admin-checkbox small {
+  margin-top: 0.2rem;
+  font-size: 0.6rem;
+  color: var(--color-ink-muted);
+}
