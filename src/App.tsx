@@ -8,24 +8,30 @@ import { isAdminArea } from "@/lib/routing"
 import { STORAGE_KEYS } from "@/lib/storage-keys"
 import type { HomeContent } from "@/types"
 
-export function App() {
-  const { courses, saveCourse, togglePublished } = useCourses()
-  const { enrollments, addEnrollment } = useEnrollments()
+export default function App() {
+  const { courses = [], saveCourse, togglePublished } = useCourses()
+  const { enrollments = [], addEnrollment } = useEnrollments()
   const [homeContent, setHomeContent] = usePersistentState<HomeContent>(
     STORAGE_KEYS.homeContent,
     initialHomeContent,
   )
 
-  return isAdminArea() ? (
-    <AdminApp
-      courses={courses}
-      saveCourse={saveCourse}
-      togglePublished={togglePublished}
-      enrollments={enrollments}
-      homeContent={homeContent}
-      setHomeContent={setHomeContent}
-    />
-  ) : (
+  const isNavigatingAdmin = typeof isAdminArea === 'function' ? isAdminArea() : false
+
+  if (isNavigatingAdmin) {
+    return (
+      <AdminApp
+        courses={courses}
+        saveCourse={saveCourse}
+        togglePublished={togglePublished}
+        enrollments={enrollments}
+        homeContent={homeContent}
+        setHomeContent={setHomeContent}
+      />
+    )
+  }
+
+  return (
     <PublicSite
       courses={courses}
       homeContent={homeContent}
@@ -33,5 +39,3 @@ export function App() {
     />
   )
 }
-
-export default App
