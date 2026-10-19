@@ -8,7 +8,7 @@ import { isAdminArea } from "@/lib/routing"
 import { STORAGE_KEYS } from "@/lib/storage-keys"
 import type { HomeContent } from "@/types"
 
-export default function App() {
+export function App() {
   const { courses, saveCourse, togglePublished } = useCourses()
   const { enrollments, addEnrollment } = useEnrollments()
   const [homeContent, setHomeContent] = usePersistentState<HomeContent>(
@@ -33,3 +33,5 @@ export default function App() {
     />
   )
 }
+
+export default App
